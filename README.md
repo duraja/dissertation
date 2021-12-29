@@ -12,3 +12,14 @@ Step3:
 Step4:
 `kubectl get nodes`
 
+Wavefront Installation:
+`kubectl create namespace wavefront`
+`kubectl get namespaces`
+
+Helm based installation --> `helm install wavefront wavefront/wavefront --namespace wavefront \
+    --set clusterName=kpi-k8s-master \
+    --set wavefront.url=<wavefront_url> \
+    --set wavefront.token=<token name> \
+    --set collector.useReadOnlyPort=true`
+
+
